@@ -15,8 +15,12 @@ def main():
 	char_dict = Counter(input_string.lower())
 	print "\nThe numbers of vowels in your string:"
 	
+	total = 0
 	for vowel in VOWELS:
+		total += char_dict[vowel.lower()]
 		print vowel + ':', char_dict[vowel.lower()]
+
+	print 'Total number of vowels in your string:', total
 
 if __name__ == '__main__':
 	main()
