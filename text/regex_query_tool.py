@@ -15,11 +15,12 @@ def main():
 	# Prompt the user for regex pattern
 	pattern = raw_input("Please type in a regex pattern and hit enter:\n")
 
-	match_obj = re.match(pattern, input_string)
+	find_obj = re.findall(pattern, input_string)
 
-	if match_obj:
+	if find_obj:
 		print 'The following matches were found:'
-		print match_obj.groups()
+		for match in find_obj:
+			print match
 	else:
 		print "The Regex pattern was not found in the string."
 
